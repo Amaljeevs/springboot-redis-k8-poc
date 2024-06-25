@@ -1,0 +1,36 @@
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-boot-app
+  labels:
+    app: spring-boot-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-boot-app
+  template:
+    metadata:
+      labels:
+        app: spring-boot-app
+    spec:
+      containers:
+        - name: app-cluster1-control-plane
+          image: psh-redis-k8-poc-service:0.0.1-SNAPSHOT
+          ports:
+            - containerPort: 8085
+---
+# service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-boot-service
+spec:
+  type: NodePort
+  ports:
+    - port: 8085
+      targetPort: 8085
+      nodePort: 32003  # Choose a port number in the range 30000-32767
+  selector:
+    app: spring-boot-app
