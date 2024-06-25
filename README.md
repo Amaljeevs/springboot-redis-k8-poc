@@ -22,7 +22,7 @@ This project demonstrates a Proof of Concept (POC) for using Spring Boot with Re
 3. **Clone Repository:**
 
    ```bash
-   git clone https://github.com/your/repository.git
+   git clone [https://github.com/your/repository.git](https://github.com/Amaljeevs/springboot-redis-k8-poc.git)
    cd repository
 
 ## Deployment
