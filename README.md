@@ -3,7 +3,8 @@
 ## Overview
 
 This project demonstrates a Proof of Concept (POC) for using Spring Boot with Redis to implement distributed locking for scheduled jobs across multiple Kubernetes clusters using KIND (Kubernetes in Docker).
-![image](https://github.com/Amaljeevs/springboot-redis-k8-poc/assets/85802462/16240c04-30a4-4772-a3eb-76023cfab1aa)
+
+<img src="(https://github.com/Amaljeevs/springboot-redis-k8-poc/assets/85802462/16240c04-30a4-4772-a3eb-76023cfab1aa)" alt="Kubernetes" style="width:400px;">
 
 
 
